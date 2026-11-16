@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自己紹介</title>
+  <style>
+    /* ========================================
+       ★文字の色や全体の配色を変える場所
+       ======================================== */
+    :root {
+      --bg-color: #f4f7f9;          /* ページ全体の背景色 */
+      --card-bg-color: #ffffff;     /* セクションの背景色 */
+      --text-color: #333333;        /* 基本の文字の色 */
+      --heading-color: #1e3a5f;     /* 見出しの文字の色 */
+      --accent-color: #2b6cb0;      /* メニューやリンクの文字の色 */
+      --border-color: #dce4ec;      /* 枠線や区切り線の色 */
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.8;
+      overflow-x: hidden;
+      overflow-wrap: break-word;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ヘッダーとページ内メニュー */
+    header {
+      background-color: var(--card-bg-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 24px 0 16px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 16px;
+      font-size: 1.6rem;
+      color: var(--heading-color);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: var(--accent-color);
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      font-size: 0.95rem;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: var(--accent-color);
+      color: #ffffff;
+    }
+
+    /* メインコンテンツ */
+    main {
+      padding: 32px 0 48px;
+    }
+
+    section {
+      background-color: var(--card-bg-color);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    section h2 {
+      margin: 0 0 16px;
+      padding-bottom: 8px;
+      font-size: 1.3rem;
+      color: var(--heading-color);
+      border-bottom: 2px solid var(--accent-color);
+    }
+
+    section p {
+      margin: 0 0 12px;
+    }
+
+    section p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul.info-list {
+      margin: 12px 0;
+      padding-left: 20px;
+    }
+
+    ul.info-list li {
+      margin-bottom: 6px;
+    }
+
+    .official-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--accent-color);
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 16px 0 32px;
+      font-size: 0.85rem;
+      color: #666666;
+    }
+
+    /* 狭い画面（スマートフォンなど）向けの調整 */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.35rem;
+      }
+
+      nav a {
+        padding: 6px 12px;
+        font-size: 0.88rem;
+      }
+
+      section {
+        padding: 18px;
+      }
+
+      section h2 {
+        font-size: 1.15rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <!-- ★タイトルを変える場合はここを書き換えます -->
+      <h1>大学1年生の自己紹介</h1>
+      <nav aria-label="ページ内メニュー">
+        <ul>
+          <li><a href="#intro">自己紹介</a></li>
+          <li><a href="#learning">今学んでいること</a></li>
+          <li><a href="#future">これからやってみたいこと</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ========================================
+         ★「自己紹介」の文章を変える場所
+         ======================================== -->
+    <section id="intro">
+      <h2>自己紹介</h2>
+      <p>はじめまして！情報学科の1年生です。</p>
+      <p>スポーツをするのも見るのも好きで、特に野球・バスケ・陸上が好きです。野球観戦もよく楽しみます。</p>
+      <p>大学では陸上のサークルに入っています。</p>
+      <!-- ★公式サイトのURLと表示名を入れる場所 -->
+      <p>
+        <a class="official-link" href="#">公式サイト（ここにURLを設定）</a>
+      </p>
+    </section>
+
+    <!-- ========================================
+         ★「今学んでいること」の文章を変える場所
+         ======================================== -->
+    <section id="learning">
+      <h2>今学んでいること</h2>
+      <p>情報学科に所属しており、情報分野の基礎から学んでいます。</p>
+    </section>
+
+    <!-- ========================================
+         ★「これからやってみたいこと」の文章を変える場所
+         ======================================== -->
+    <section id="future">
+      <h2>これからやってみたいこと</h2>
+      <ul class="info-list">
+        <li>陸上サークルでの活動を続けて、大学3年生までにフルマラソンで「サブ4（4時間切り）」を達成したいです。</li>
+        <li>同じ学科やサークルの同級生とたくさん話して、一緒にスポーツをしたり観戦したりしたいです。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>自己紹介ページ</p>
+    </div>
+  </footer>
+
+</body>
+</html>
